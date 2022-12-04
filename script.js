@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
     circle.style.top = 0;
 });
 
-window.addEventListener('keyup', function(e){
+window.addEventListener('keydown', function(e){
  switch(e.key){
     case 'ArrowLeft':
         circle.style.left = parseInt(circle.style.left)-eachMove+'px';
