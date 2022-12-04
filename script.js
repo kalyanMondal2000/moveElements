@@ -1,6 +1,7 @@
 const circle = document.getElementById("circle");
 const eachMove = 10;
 
+
 var w = window.innerWidth;
 var h = window.innerHeight;
 
@@ -11,13 +12,7 @@ window.addEventListener('load', function(){
 });
 
 
-
-
 window.addEventListener('keydown', function(e){
- 
-if(circle.style.left>w || circle.style.top > h){
-    console.log("game over")
-}
  switch(e.key){
     case 'ArrowLeft':
         circle.style.left = parseInt(circle.style.left)-eachMove+'px';
