@@ -4,3 +4,8 @@
     border-radius: 50%;
     background-color: red;
 }
+
+#gameMessage{
+    display: flex;
+    justify-content: center;
+}
