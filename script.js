@@ -25,11 +25,3 @@ window.addEventListener('keyup', function(e){
  }
 });
 
-const gameOver = () =>{
-    if(circle.style.left < 0 || circle.style.top < 0){
-        circle.style.color = 'white';
-        const message = document.createElement('p');
-        message.innerText = "Oh no game over!";
-        document.getElementById("gameMessage").appendChild(message);
-    }
-}
