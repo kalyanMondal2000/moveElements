@@ -1,13 +1,23 @@
 const circle = document.getElementById("circle");
 const eachMove = 10;
 
+var w = window.innerWidth;
+var h = window.innerHeight;
+
 window.addEventListener('load', function(){
     circle.style.position = 'absolute'
     circle.style.left = 0; 
     circle.style.top = 0;
 });
 
+
+
+
 window.addEventListener('keydown', function(e){
+ 
+if(circle.style.left>w || circle.style.top > h){
+    console.log("game over")
+}
  switch(e.key){
     case 'ArrowLeft':
         circle.style.left = parseInt(circle.style.left)-eachMove+'px';
@@ -21,14 +31,10 @@ window.addEventListener('keydown', function(e){
     case 'ArrowUp':
         circle.style.top = parseInt(circle.style.top)-eachMove+'px';
         break;
-
+    
+    
  }
 });
 
-function outBounds(){
-    if(circle.style.left > window.innerWidth||circle.style.top > window.innerHeight){
-        alert("game over");
-    }
-}
 
-window.addEventListener('keydown', outBounds);
+
