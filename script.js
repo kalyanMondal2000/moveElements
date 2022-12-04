@@ -25,3 +25,10 @@ window.addEventListener('keydown', function(e){
  }
 });
 
+function outBounds(){
+    if(circle.style.left > window.innerWidth||circle.style.top > window.innerHeight){
+        alert("game over");
+    }
+}
+
+window.addEventListener('keydown', outBounds);
