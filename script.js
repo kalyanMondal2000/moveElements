@@ -33,12 +33,3 @@ window.addEventListener('keydown', function(e){
 
  }
 });
-
-window.addEventListener('click', function(){
-    const newThing = document.createElement('div')
-    newThing.style.height = 100 +'px';
-    newThing.style.width = 100 +'px';
-    newThing.style.borderRadius = 50+"%";
-    newThing.style.backgroundColor = 'black';
-
-})
