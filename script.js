@@ -1,5 +1,22 @@
+//Javascript 
 const circle = document.getElementById("circle");
 const eachMove = 10;
+
+const left = () => {
+    return parseInt(circle.style.left)-eachMove+'px';
+}
+
+const right = () => {
+    return parseInt(circle.style.left)+eachMove+'px';
+}
+
+const down = () => {
+    return parseInt(circle.style.top)+eachMove+'px';
+}
+
+const up = () => {
+    return parseInt(circle.style.top)-eachMove+'px';
+}
 
 
 var w = window.innerWidth;
@@ -15,20 +32,24 @@ window.addEventListener('load', function(){
 window.addEventListener('keydown', function(e){
  switch(e.key){
     case 'ArrowLeft':
-        circle.style.left = parseInt(circle.style.left)-eachMove+'px';
-        console.log(circle.style.left)
+        if(parseInt(circle.style.left) >= 0){
+            left()
+        }
         break;
     case 'ArrowRight':
-        circle.style.left = parseInt(circle.style.left)+eachMove+'px';
-        console.log(circle.style.left)
+        if(parseInt(circle.style.left) <= w){
+            right()
+        }
         break;
     case 'ArrowDown':
-        circle.style.top = parseInt(circle.style.top)+eachMove+'px';
-        console.log(circle.style.left)
+        if(parseInt(circle.style.top) <= h){
+            down()
+        }
         break;
     case 'ArrowUp':
-        circle.style.top = parseInt(circle.style.top)-eachMove+'px';
-        console.log(circle.style.left)
+        if(parseInt(circle.style.top) >= 0){
+            up()
+        }
         break;
 
  }
