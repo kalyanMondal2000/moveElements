@@ -34,21 +34,25 @@ window.addEventListener('keydown', function(e){
     case 'ArrowLeft':
         if(parseInt(circle.style.left) >= 0){
             left()
+            console.log("left!")
         }
         break;
     case 'ArrowRight':
         if(parseInt(circle.style.left) <= w){
             right()
+            console.log("right!")
         }
         break;
     case 'ArrowDown':
         if(parseInt(circle.style.top) <= h){
             down()
+            console.log("down!")
         }
         break;
     case 'ArrowUp':
         if(parseInt(circle.style.top) >= 0){
             up()
+            console.log("up!")
         }
         break;
 
